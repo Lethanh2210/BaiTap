@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo">This is a text</p>
+<p id="demo1">Click</p>
+<select name="number" id="myselect"  >
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+<script>
+    // function change(){
+    //     var selectvalue = document.getElementById("myselect").value;
+    //     alert(selectvalue);
+    // }
+    var selectE = document.getElementById("myselect");
+    selectE.addEventListener("change", changeF);
+    function changeF(){
+        var selectV = document.getElementById("myselect").value;
+        alert(selectV);
+    }
+    function mouseover(){
+        document.getElementById("demo").style.color ="red";
+    }
+    function mouseout(){
+        document.getElementById("demo").style.color = "blue";
+    }
+    var mouseE = document.getElementById("demo");
+    mouseE.addEventListener("mouseover", mouseover);
+    mouseE.addEventListener("mouseout", mouseout);
+
+    var demo = document.getElementById("demo1");
+    demo.addEventListener("click",click);
+    function click(){
+        alert("xin chao");
+    }
+
+</script>
+</body>
+</html>
